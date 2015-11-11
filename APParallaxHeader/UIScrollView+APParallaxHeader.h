@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @class APParallaxView;
 @class APParallaxShadowView;
@@ -15,7 +16,7 @@
 @interface UIScrollView (APParallaxHeader)
 
 - (void)addParallaxWithImage:(UIImage *)image andHeight:(CGFloat)height andShadow:(BOOL)shadow;
-- (void)addParallaxWithImage:(UIImage *)image andHeight:(CGFloat)height;
+- (void)addParallaxWithImage:(NSString *)image andHeight:(CGFloat)height;
 - (void)addParallaxWithView:(UIView*)view andHeight:(CGFloat)height;
 
 @property (nonatomic, strong, readonly) APParallaxView *parallaxView;
@@ -38,9 +39,9 @@ typedef NS_ENUM(NSUInteger, APParallaxTrackingState) {
 
 @property (nonatomic, readonly) APParallaxTrackingState state;
 @property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) UIVisualEffectView *effectView;
 @property (nonatomic, strong) UIView *currentSubView;
 @property (nonatomic, strong) APParallaxShadowView *shadowView;
-@property (nonatomic, strong) UIView *customView;
 
 - (id)initWithFrame:(CGRect)frame andShadow:(BOOL)shadow;
 
