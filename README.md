@@ -1,5 +1,7 @@
 # APParallaxHeader
 
+CUSTOM VERSION - REQUIRES: pod 'SDWebImage'
+
 This category makes it super easy to add a parallax header view to your scroll views. Other alternatives relies on subclassing of `UIScrollView`, `UITableViewController` or `UITableView`. Instead APParallaxHeader uses the Objective-C runtime to add the two following methods to `UIScrollView` without the need to do any subclassing.
 
 ```objective-c
